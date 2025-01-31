@@ -184,7 +184,6 @@
 <script>
     document.addEventListener('DOMContentLoaded', async function () {
         const employeeListBtn = document.getElementById('employeeListBtn');
-        const vacationBtn = document.getElementById('vacationBtn');
         const departmentList = document.getElementById('departmentList');
         const contextMenu = document.getElementById('contextMenu');
         const employeeSearchInput = document.getElementById('employeeSearch');
@@ -367,7 +366,7 @@
                 document.getElementById('editAddress').value = employeeData.address;
                 document.getElementById('editPosition').value = employeeData.position;
                 await populateDepartmentOptions(employeeData.departmentName);
-                document.getElementById('editWage').value = employeeData.wage;
+                document.getElementById('editWage').value = employeeData.wage.toFixed(0);
                 document.getElementById('editRole').value = employeeData.role;
                 document.getElementById('editEmployeeId').value = employeeId;
 
