@@ -247,7 +247,7 @@ public class EmployeeServiceImpl implements EmployeeService {
             mailSender.send(mimeMessage);
             return "Invitation email sent successfully.";
         } catch (Exception e) {
-            throw new RuntimeException("전송 실패");
+            throw new RuntimeException(e.getMessage());
         }
     }
 

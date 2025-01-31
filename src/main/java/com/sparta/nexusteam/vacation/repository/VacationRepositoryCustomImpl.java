@@ -1,5 +1,10 @@
 package com.sparta.nexusteam.vacation.repository;
 
+import java.time.LocalDateTime;
+import java.util.List;
+
+import org.springframework.stereotype.Repository;
+
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import com.sparta.nexusteam.employee.entity.QEmployee;
 import com.sparta.nexusteam.employee.entity.UserRole;
@@ -8,10 +13,8 @@ import com.sparta.nexusteam.vacation.entity.QVacation;
 import com.sparta.nexusteam.vacation.entity.QVacationType;
 import com.sparta.nexusteam.vacation.entity.QVacationTypeHistory;
 import com.sparta.nexusteam.vacation.entity.Vacation;
-import java.time.LocalDateTime;
-import java.util.List;
+
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Repository;
 
 @Repository
 @RequiredArgsConstructor

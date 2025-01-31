@@ -5,6 +5,8 @@ import com.sparta.nexusteam.security.JwtAuthenticationFilter;
 import com.sparta.nexusteam.security.JwtAuthorizationFilter;
 import com.sparta.nexusteam.security.JwtProvider;
 import com.sparta.nexusteam.security.UserDetailsServiceImpl;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.security.servlet.PathRequest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -25,12 +27,12 @@ import lombok.RequiredArgsConstructor;
 @EnableWebSecurity
 @RequiredArgsConstructor
 public class WebSecurityConfig {
-
+	
+	
     private final JwtProvider jwtProvider;
     private final UserDetailsServiceImpl userDetailsService;
     private final AuthenticationConfiguration authenticationConfiguration;
     private final EmployeeRepository employeeRepository;
-
 
     @Bean
     public PasswordEncoder passwordEncoder() {
