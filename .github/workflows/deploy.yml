@@ -39,9 +39,9 @@ jobs:
       - name: Transfer Docker image to EC2
         uses: appleboy/scp-action@v0.1.3
         with:
-          host: ${{ env.SSH_HOST }}
+          host: ${{ secrets.SSH_HOST }}
           username: ubuntu
-          key: ${{ env.SSH_KEY }}
+          key: ${{ secrets.SSH_KEY }}
           port: 22
           source: "./nexus.tar"
           target: "~"
@@ -50,9 +50,9 @@ jobs:
       - name: Load Docker image on EC2
         uses: appleboy/ssh-action@v0.1.5
         with:
-          host: ${{ env.SSH_HOST }}
+          host: ${{ secrets.SSH_HOST }}
           username: ubuntu
-          key: ${{ env.SSH_KEY }}
+          key: ${{ secrets.SSH_KEY }}
           script: |
             docker stop nexus || true
             docker rm nexus || true
