@@ -14,6 +14,7 @@ public class EmployeeResponse {
     private String phoneNumber;
     private Position position;
     private String departmentName;
+    private Double wage;
     private UserRole role;
 
     public EmployeeResponse(Employee employee) {
@@ -23,6 +24,7 @@ public class EmployeeResponse {
         this.phoneNumber = employee.getPhoneNumber();
         this.position = employee.getPosition();
         this.departmentName = employee.getDepartment().getName();
+        this.wage = employee.getWage();
         this.role = employee.getRole();
     }
 }
